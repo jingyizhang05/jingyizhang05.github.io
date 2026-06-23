@@ -1,76 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>张竞一的主页</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张竞一的主页</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 左侧栏：主导航 + 子目录 -->
-<div id="menu">
-<!-- 主导航（原顶部栏，现移至左侧顶部） -->
-<div id="choice">
-<table>
-<tr><td><span>基本介绍</span></td></tr>
-<tr><td><a href="courses.html">课程资料</a></td></tr>
-<tr><td><a href="projects.html">教学相关</a></td></tr>
-</table>
-</div>
-<!-- 子目录 -->
-<dl>
-<dt><a href="#about">关于作者</a></dt>
-<dd><a href="#intro">作者简介</a></dd>
-<dd><a href="#contact">联系作者</a></dd>
-<dt><a href="#site">关于主页</a></dt>
-<dd><a href="#guide">各部分简介</a></dd>
-<dd><a href="#changelog">更新日志</a></dd>
-</dl>
-</div>
-<!-- 右侧主内容区 -->
-<div id="mainpart">
-<h2 id="about">关于作者</h2>
-<h3 id="intro">作者简介</h3>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;本科：中国科学技术大学
-<br>&nbsp;&nbsp;&nbsp;&nbsp;院系：数学科学学院
-<br>&nbsp;&nbsp;&nbsp;&nbsp;方向：概率统计
-<br>&nbsp;&nbsp;&nbsp;&nbsp;年级：2023级本科生
-</p>
-<h3 id="contact">联系作者</h3>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;邮箱:zhangjingyi@mail.ustc.edu.cn
-<br>&nbsp;&nbsp;&nbsp;&nbsp;QQ:2708671241
-</p>
-<hr>
-<h2 id="site">关于主页</h2>
-<h3 id="guide">各部分简介</h3>
-<ul>
-  <li><a href="index.html">基本介绍</a>
-    <ul>
-      <li><a href="#about">关于作者</a></li>
-        <li><a href="#intro">作者简介</a></li>
-        <li><a href="#contact">联系作者</a></li>
-    </ul>
-  </li>
-  <li><a href="courses.html">课程资料</a>
-    <ul>
-      <li><a href="courses.html#math">数学课程</a></li>
-      <li><a href="courses.html#physics">物理课程</a></li>
-      <li><a href="courses.html#other">杂项课程</a></li>
-    </ul>
-  </li>
-  <li><a href="projects.html">教学相关</a>
-    <ul>
-      <li><a href="projects.html#eteach">电磁学助教</a></li>
-      <li><a href="projects.html#mteach">力学助教</a></li>
-      <li><a href="projects.html#hteach">热学助教</a></li>
-    </ul>
-  </li>
-</ul>
-<h3 id="changelog">更新日志</h3>
-<p>
-2026/06/23 主页创建完成。<br>
-2026/06/23 课程资料页面丰富完成，添加全部数学、物理、杂项课程及笔记链接占位。
-</p>
-</div>
+  <!-- 顶部导航栏 -->
+  <div id="choice">
+    <table>
+      <tr>
+        <td><span>基本介绍</span></td>
+        <td><a href="courses.html">课程资料</a></td>
+        <td><a href="projects.html">教学相关</a></td>
+      </tr>
+    </table>
+  </div>
+  <!-- 左侧导航栏 -->
+  <div id="menu">
+    <dl>
+      <dt>基本介绍</dt>
+      <dd><a href="#intro">作者简介</a></dd>
+      <dd><a href="#contact">联系作者</a></dd>
+      <dd><a href="#changelog">更新日志</a></dd>
+    </dl>
+  </div>
+  <!-- 右侧主内容区 -->
+  <div id="mainpart">
+    <h2 id="about">关于作者</h2>
+    <h3 id="intro">作者简介</h3>
+    <p>本科：中国科学技术大学<br>
+       院系：数学科学学院<br>
+       方向：概率统计<br>
+       年级：2023级本科生</p>
+    <h3 id="contact">联系作者</h3>
+    <p>邮箱: zhangjingyi@mail.ustc.edu.cn</p>
+    <h3 id="changelog">更新日志</h3>
+    <p>2026/06/23 主页创建完成。</p>
+  </div>
 </body>
 </html>
