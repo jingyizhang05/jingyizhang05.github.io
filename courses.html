@@ -7,33 +7,42 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 顶部导航栏（与主页结构相同） -->
+<!-- 左侧栏：主导航 + 子目录 -->
+<div id="menu">
+<!-- 主导航（原顶部栏，现移至左侧顶部） -->
 <div id="choice">
 <table>
-<tr>
-<td><a href="index.html">基本介绍</a></td>
-<td><span>课程资料</span></td>
-<td><a href="projects.html">教学相关</a></td>
-</tr>
+<tr><td><a href="index.html">基本介绍</a></td></tr>
+<tr><td><span>课程资料</span></td></tr>
+<tr><td><a href="projects.html">教学相关</a></td></tr>
 </table>
 </div>
-<!-- 左侧边栏目录 -->
-<div id="menu">
+<!-- 子目录 -->
 <dl>
 <dt><a href="#math">数学课程</a></dt>
-
 <dd><a href="#analysis">数学分析</a></dd>
 <dd><a href="#algebra">高等代数</a></dd>
-<dd><a href="#geometry">解析几何</a></dd>
-
+<dd><a href="#probability">概率论</a></dd>
+<dd><a href="#complex">复分析</a></dd>
+<dd><a href="#real">实分析</a></dd>
+<dd><a href="#modern">近世代数</a></dd>
+<dd><a href="#functional">泛函分析</a></dd>
+<dd><a href="#diffgeo">微分几何</a></dd>
+<dd><a href="#stochastic">应用随机过程</a></dd>
+<dd><a href="#regression">回归分析</a></dd>
 
 <dt><a href="#physics">物理课程</a></dt>
-
-<dd><a href="#mech">力学</a></dd>
+<dd><a href="#mechheat">力学与热学</a></dd>
+<dd><a href="#em">电磁学</a></dd>
+<dd><a href="#optatom">光学与原子物理</a></dd>
 
 <dt><a href="#other">杂项课程</a></dt>
-
-
+<dd><a href="#sizheng">思政</a></dd>
+<dd><a href="#shigang">史纲</a></dd>
+<dd><a href="#mayuan">马原</a></dd>
+<dd><a href="#maogai">毛概</a></dd>
+<dd><a href="#astro">天体物理概观</a></dd>
+<dd><a href="#infosec">信息安全的艺术</a></dd>
 </dl>
 </div>
 <!-- 右侧主内容区 -->
@@ -41,40 +50,68 @@
 
 <h2 id="math">数学课程</h2>
 
+<!-- 数学分析：将下方 href="#" 替换为你的笔记 PDF 路径，例如 "notes/math_analysis.pdf" -->
+<h3 id="analysis">数学分析 <a href="#" class="note-link">笔记</a></h3>
 
-<h3 id="analysis">数学分析</h3>
-<p>教材：陈纪修《数学分析》</p>
-<ul>
-<li><a href="#" class="static">课程笔记</a></li>
-<li><a href="#" class="static">习题解答</a></li>
-</ul>
+<!-- 高等代数 -->
+<h3 id="algebra">高等代数 <a href="#" class="note-link">笔记</a></h3>
 
+<!-- 概率论 -->
+<h3 id="probability">概率论 <a href="#" class="note-link">笔记</a></h3>
 
-<h3 id="algebra">高等代数</h3>
-<p>教材：李尚志《线性代数》</p>
-<ul>
-<li><a href="#" class="static">课程笔记</a></li>
-</ul>
+<!-- 复分析 -->
+<h3 id="complex">复分析 <a href="#" class="note-link">笔记</a></h3>
 
-<h3 id="geometry">解析几何</h3>
-<p>教材：丘维声《解析几何》</p>
-<ul>
-<li><a href="#" class="static">课程笔记</a></li>
-</ul>
+<!-- 实分析 -->
+<h3 id="real">实分析 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 近世代数 -->
+<h3 id="modern">近世代数 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 泛函分析 -->
+<h3 id="functional">泛函分析 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 微分几何 -->
+<h3 id="diffgeo">微分几何 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 应用随机过程 -->
+<h3 id="stochastic">应用随机过程 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 回归分析 -->
+<h3 id="regression">回归分析 <a href="#" class="note-link">笔记</a></h3>
 
 <hr>
 <h2 id="physics">物理课程</h2>
 
-<h3 id="mech">力学</h3>
-<p>教材：刘金琨《理论力学》</p>
-<ul>
-<li><a href="#" class="static">实验报告汇总</a></li>
-<li><a href="#" class="static">大作业代码</a></li>
-</ul>
+<!-- 力学与热学 -->
+<h3 id="mechheat">力学与热学 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 电磁学 -->
+<h3 id="em">电磁学 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 光学与原子物理 -->
+<h3 id="optatom">光学与原子物理 <a href="#" class="note-link">笔记</a></h3>
 
 <hr>
 <h2 id="other">杂项课程</h2>
 
+<!-- 思政 -->
+<h3 id="sizheng">思政 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 史纲 -->
+<h3 id="shigang">史纲 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 马原 -->
+<h3 id="mayuan">马原 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 毛概 -->
+<h3 id="maogai">毛概 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 天体物理概观 -->
+<h3 id="astro">天体物理概观 <a href="#" class="note-link">笔记</a></h3>
+
+<!-- 信息安全的艺术 -->
+<h3 id="infosec">信息安全的艺术 <a href="#" class="note-link">笔记</a></h3>
 
 </div>
 </body>

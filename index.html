@@ -7,18 +7,17 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 顶部导航栏 -->
+<!-- 左侧栏：主导航 + 子目录 -->
+<div id="menu">
+<!-- 主导航（原顶部栏，现移至左侧顶部） -->
 <div id="choice">
 <table>
-<tr>
-<td><span>基本介绍</span></td>
-<td><a href="courses.html">课程资料</a></td>
-<td><a href="projects.html">教学相关</a></td>
-</tr>
+<tr><td><span>基本介绍</span></td></tr>
+<tr><td><a href="courses.html">课程资料</a></td></tr>
+<tr><td><a href="projects.html">教学相关</a></td></tr>
 </table>
 </div>
-<!-- 左侧边栏目录 -->
-<div id="menu">
+<!-- 子目录 -->
 <dl>
 <dt><a href="#about">关于作者</a></dt>
 <dd><a href="#intro">作者简介</a></dd>
@@ -45,7 +44,7 @@
 <h2 id="site">关于主页</h2>
 <h3 id="guide">各部分简介</h3>
 <ul>
-  <li><a href="style.css">基本介绍</a>
+  <li><a href="index.html">基本介绍</a>
     <ul>
       <li><a href="#about">关于作者</a></li>
         <li><a href="#intro">作者简介</a></li>
@@ -54,7 +53,6 @@
   </li>
   <li><a href="courses.html">课程资料</a>
     <ul>
-      <li><a href="courses.html#data">资料整合</a></li>
       <li><a href="courses.html#math">数学课程</a></li>
       <li><a href="courses.html#physics">物理课程</a></li>
       <li><a href="courses.html#other">杂项课程</a></li>
@@ -62,15 +60,16 @@
   </li>
   <li><a href="projects.html">教学相关</a>
     <ul>
-      <li><a href="#eteach">电磁学助教</a></dd>
-      <li><a href="#mteach">力学助教</a></dd>
-      <li><a href="#hteach">热学助教</a></dd>
+      <li><a href="projects.html#eteach">电磁学助教</a></li>
+      <li><a href="projects.html#mteach">力学助教</a></li>
+      <li><a href="projects.html#hteach">热学助教</a></li>
     </ul>
   </li>
 </ul>
 <h3 id="changelog">更新日志</h3>
 <p>
-2026/06/23 主页创建完成。
+2026/06/23 主页创建完成。<br>
+2026/06/23 课程资料页面丰富完成，添加全部数学、物理、杂项课程及笔记链接占位。
 </p>
 </div>
 </body>
