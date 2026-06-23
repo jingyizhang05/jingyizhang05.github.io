@@ -1,144 +1,228 @@
-/* ========== 全局重置 ========== */
-/* 去掉浏览器默认的边距和内边距 */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* ===========================
+   全局设置
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-/* 设置页面背景色和默认文字样式 */
-body {
-background-color: #0f172a; /* 深色背景 */
-color: #e8e6e3; /* 浅色文字 */
-font-family: "Microsoft YaHei", "SimSun", sans-serif; /* 中文字体 */
-font-size: 15px;
-line-height: 1.8;
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#0f172a;
+    color:#e8e6e3;
+    font-family:"Microsoft YaHei","SimSun",sans-serif;
 }
-/* ========== 顶部导航栏 ========== */
-#choice {
-position: ffxed; /* 固定在顶部，滚动时不移动 */
-top: 0;
-left: 0;
-width: 100%;
-height: 44px;
-background-color: #1e3a5f; /* 导航栏深蓝色 */
-display: ffex;
-align-items: center;
-z-index: 100; /* 确保在最上层 */
+
+/* ===========================
+   顶部导航栏
+=========================== */
+
+#choice{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:50px;
+
+    background:#1e3a5f;
+
+    z-index:1000;
+
+    border-bottom:1px solid #2d4a6f;
 }
-#choice table {
-width: 100%;
-border-collapse: collapse;
+
+#choice table{
+    width:100%;
+    height:100%;
+    border-collapse:collapse;
 }
-#choice td {
-text-align: center;
-padding: 10px 20px;
+
+#choice td{
+    text-align:center;
+    vertical-align:middle;
 }
-#choice td span {
-color: #e8e6e3;
-font-weight: bold;
-font-size: 15px;
+
+#choice span{
+    color:white;
+    font-size:16px;
+    font-weight:bold;
 }
-#choice td a {
-color: #b0c4de; /* 导航链接用浅蓝色 */
-text-decoration: none;
-font-size: 14px;
-transition: color 0.3s; /* 鼠标悬停时颜色渐变 */}
-#choice td a:hover {
-color: #ffffff; /* 悬停变白色 */
+
+#choice a{
+    color:#b0c4de;
+    text-decoration:none;
+    font-size:15px;
+    transition:0.3s;
 }
-/* ========== 左侧边栏目录 ========== */
-#menu {
-position: ffxed; /* 固定在左侧 */
-top: 44px; /* 紧贴导航栏下方 */
-left: 0;
-width: 180px;
-height: calc(100% - 44px); /* 占满剩余高度 */
-background-color: #162c4a; /* 侧边栏比导航栏稍深 */
-padding: 20px 0;
-overflow-y: auto; /* 内容多时可以滚动 */
+
+#choice a:hover{
+    color:white;
 }
-#menu dl {
-margin: 0;
-padding: 0 16px;
+
+/* ===========================
+   左侧菜单
+=========================== */
+
+#menu{
+    position:fixed;
+
+    top:50px;
+    left:0;
+
+    width:240px;
+    height:calc(100vh - 50px);
+
+    background:#162c4a;
+
+    overflow-y:auto;
+
+    border-right:1px solid #2d4a6f;
+
+    padding:20px;
 }
-#menu dt {
-margin-top: 16px;
-margin-bottom: 6px;
+
+/* 滚动条 */
+
+#menu::-webkit-scrollbar{
+    width:6px;
 }
-#menu dt a {
-color: #e8e6e3;
-text-decoration: none;
-font-weight: bold;
-font-size: 14px;
+
+#menu::-webkit-scrollbar-thumb{
+    background:#3b82c4;
+    border-radius:4px;
 }
-#menu dd {
-margin-bottom: 4px;
-padding-left: 14px;
+
+#menu dl{
+    margin:0;
 }
-#menu dd a {
-color: #8aa8c8; /* 二级链接用更浅的蓝色 */
-text-decoration: none;
-font-size: 13px;
-transition: color 0.3s;
+
+#menu dt{
+    margin-top:18px;
+    margin-bottom:10px;
+
+    color:white;
+    font-weight:bold;
+    font-size:18px;
 }
-#menu dd a:hover {
-color: #ffffff;
+
+#menu dd{
+    margin-left:18px;
+    margin-bottom:8px;
 }
-/* ========== 右侧主内容区 ========== */
-.main-content {
-margin-top: 44px; /* 留出导航栏高度 */
-margin-left: 180px; /* 留出侧边栏宽度 */
-padding: 30px 40px 60px 40px; /* 内边距 */
-max-width: 800px; /* 限制最大宽度，阅读更舒适 */
+
+#menu a{
+    color:#b0c4de;
+    text-decoration:none;
+    transition:0.3s;
 }
-/* 主内容区的标题样式 */
-#mainpart h2 {
-color: #e8e6e3;
-font-size: 22px;
-border-bottom: 2px solid #2d4a6f; /* 标题下方的分隔线 */
-padding-bottom: 8px;
-margin: 30px 0 16px 0;
+
+#menu a:hover{
+    color:white;
 }
-#mainpart h3 {
-color: #b0c4de;
-font-size: 17px;
-margin: 20px 0 10px 0;
+
+/* ===========================
+   右侧内容区
+=========================== */
+
+#mainpart{
+    position:fixed;
+
+    top:50px;
+    left:240px;
+
+    width:calc(100vw - 240px);
+    height:calc(100vh - 50px);
+
+    overflow-y:auto;
+
+    padding:40px;
+
+    background:#081633;
 }
-#mainpart p {
-margin-bottom: 12px;
-line-height: 1.8;
+
+/* 内容区滚动条 */
+
+#mainpart::-webkit-scrollbar{
+    width:8px;
 }
-/* 普通链接样式 */
-#mainpart a {
-color: #3b82c4; /* 蓝色强调色 */
-text-decoration: none;
-transition: color 0.3s;
+
+#mainpart::-webkit-scrollbar-thumb{
+    background:#3b82c4;
+    border-radius:4px;
 }
-#mainpart a:hover {
-color: #60a5fa; /* 悬停变亮蓝色 */
-text-decoration: underline;
+
+/* ===========================
+   标题
+=========================== */
+
+#mainpart h2{
+    font-size:40px;
+
+    margin-bottom:25px;
+
+    border-bottom:2px solid #2d4a6f;
+
+    padding-bottom:10px;
 }
-/* 外部链接特殊样式（绿色） */
-#mainpart a.out {
-color: #4ade80;
+
+#mainpart h3{
+    font-size:24px;
+
+    color:#b0c4de;
+
+    margin-top:30px;
+    margin-bottom:15px;
 }
-#mainpart a.out:hover {
-color: #86efac;
+
+/* ===========================
+   正文
+=========================== */
+
+#mainpart p{
+    line-height:2;
+    font-size:18px;
+    margin-bottom:20px;
 }
-/* 内部链接样式 */
-#mainpart a.static {
-color: #3b82c4;
+
+#mainpart ul{
+    margin-left:25px;
+    margin-top:10px;
 }
-/* 分隔线 */#mainpart hr {
-border: none;
-border-top: 1px solid #2d4a6f;
-margin: 24px 0;
+
+#mainpart li{
+    margin-bottom:10px;
+    font-size:18px;
 }
-/* 列表样式 */
-#mainpart ul, #mainpart ol {
-margin: 8px 0 12px 24px;
-line-height: 1.8;
+
+/* ===========================
+   链接
+=========================== */
+
+#mainpart a{
+    color:#60a5fa;
+    text-decoration:none;
 }
-#mainpart li {
-margin-bottom: 4px;
+
+#mainpart a:hover{
+    text-decoration:underline;
+}
+
+.static{
+    color:#60a5fa;
+}
+
+/* ===========================
+   分隔线
+=========================== */
+
+#mainpart hr{
+    border:none;
+    border-top:1px solid #2d4a6f;
+    margin:30px 0;
 }
