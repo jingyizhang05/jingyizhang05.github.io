@@ -1,57 +1,148 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>张竞一的主页</title>
+  <title>张竞一 · 个人主页</title>
+  <meta name="description" content="张竞一个人主页 — 中国科学技术大学数学科学学院概率统计方向本科生">
   <link rel="stylesheet" href="style.css">
+  <!-- 防止 FOUC：先读取主题 -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <!-- 顶部导航栏 -->
-  <div id="choice">
-    <table>
-      <tr>
-        <td><span>基本介绍</span></td>
-        <td><a href="courses.html">课程资料</a></td>
-        <td><a href="projects.html">教学相关</a></td>
-      </tr>
-    </table>
+
+<!-- =============== 顶部 Masthead =============== -->
+<header class="masthead">
+  <div class="masthead__inner-wrap">
+    <a href="index.html" class="site-name">
+      张竞一<span class="sep">·</span><span class="en">Jingyi Zhang</span>
+    </a>
+    <button class="menu-toggle" aria-label="菜单" onclick="toggleTopNav()">☰</button>
+    <nav class="masthead__menu" id="topNav">
+      <span class="masthead__menu-item active"><a href="index.html">基本介绍</a></span>
+      <span class="masthead__menu-item"><a href="courses.html">课程资料</a></span>
+      <span class="masthead__menu-item"><a href="projects.html">教学相关</a></span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题" title="切换浅色/暗色">🌙</button>
+    </nav>
   </div>
-  <!-- 左侧导航栏 -->
-  <div id="menu">
-    <dl>
-      <dt>基本介绍</dt>
-      <dd><a href="#intro">作者简介</a></dd>
-      <dd><a href="#contact">联系作者</a></dd>
-      <dd><a href="#shiyong">使用说明</a></dd>
-      <dd><a href="#changelog">更新日志</a></dd>
-    </dl>
+</header>
+
+<!-- =============== 页面主体 =============== -->
+<div class="page">
+
+  <!-- 左侧作者栏 -->
+  <aside class="sidebar">
+    <div class="author__avatar">张</div>
+    <div class="author__name">
+      张竞一
+      <span class="en">Jingyi Zhang</span>
+    </div>
+    <div class="author__bio">
+      <strong>中国科学技术大学</strong><br>
+      数学科学学院 · 2023级本科生<br>
+      方向：概率统计
+    </div>
+
+    <div class="author__urls-wrapper">
+      <ul class="author__urls">
+        <li><span class="icon">✉</span><a href="mailto:zhangjingyi@mail.ustc.edu.cn">Email</a></li>
+        <li><span class="icon">💬</span>QQ: 2708671241</li>
+        <li><span class="icon">🎓</span><a href="https://www.ustc.edu.cn" target="_blank" rel="noopener">USTC</a></li>
+        <li><span class="icon">📍</span>安徽 · 合肥</li>
+      </ul>
+    </div>
+
+    <div class="sidebar__nav">
+      <div class="sidebar__nav-group">
+        <div class="sidebar__nav-title">本页目录</div>
+        <ul>
+          <li><a href="#intro">作者简介</a></li>
+          <li><a href="#contact">联系作者</a></li>
+          <li><a href="#shiyong">使用说明</a></li>
+          <li><a href="#changelog">更新日志</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 右侧主内容 -->
+  <main class="main">
+    <div class="page__inner-wrap">
+      <h1 class="page__title">关于作者</h1>
+      <div class="page__meta">个人主页 · 最后更新 2026/06/25</div>
+
+      <h2 id="intro" class="section-anchor">作者简介</h2>
+      <p>
+        本科就读于<strong>中国科学技术大学 数学科学学院</strong>，方向为概率统计，
+        现为 2023 级本科生。本科期间系统学习了数学、物理以及统计方向的核心课程，
+        并多次担任物理类课程的助教工作。本网站用于存放课程笔记、习题与教学相关材料，
+        以供个人复习与后来者参考。
+      </p>
+      <p>
+        如对笔记内容、教学材料或网站本身有任何建议，欢迎通过下方联系方式与我交流。
+        部分课程资料会持续更新，建议不定期回访查看最新版本。
+      </p>
+
+      <h2 id="contact" class="section-anchor">联系作者</h2>
+      <ul>
+        <li>邮箱：<a href="mailto:zhangjingyi@mail.ustc.edu.cn">zhangjingyi@mail.ustc.edu.cn</a></li>
+        <li>QQ：2708671241</li>
+        <li>所在单位：中国科学技术大学 数学科学学院</li>
+      </ul>
+
+      <h2 id="shiyong" class="section-anchor">使用说明</h2>
+      <p>
+        本网站主要用于存放作者的课程资料和教学相关内容，所有内容均为作者个人整理，
+        可供个人的课程学习复习，<strong>未经允许请勿转载</strong>。
+      </p>
+      <p>
+        课程总结中的 PDF 文件均为作者个人整理的笔记和总结。其中通修课
+        （两大门：<em>数学分析</em>、<em>高等代数</em>；四小门：<em>复分析</em>、<em>实分析</em>、<em>近世代数</em>、<em>微分几何</em>）
+        的笔记部分为作者在大三下学期准备本校 2026 年暑期数学学院保研夏令营时的笔记，
+        题型总结部分为按照夏令营的大概考试范围整理的自 2020 年来相应课程的考试题目内容，
+        现放在主页中以供后来者参考复习。其余课程笔记为作者学习对应课程时整理的课堂笔记。
+        对应的教材或者参考书籍资料由于版权问题不能放在链接中，如有需要可以联系作者。
+      </p>
+      <p>
+        教学相关部分主要为作者在本科阶段担任<strong>电磁学</strong>（大三上）、
+        <strong>力学与热学</strong>（大三下）课程助教时的相关内容整理，
+        主要为助教过程中整理作业答案和习题课讲义。
+      </p>
+
+      <h2 id="changelog" class="section-anchor">更新日志</h2>
+      <ul class="changelog">
+        <li><span class="date">2026/06/25</span> 主页升级为 academicpages 风格布局：顶部导航 + 左侧作者栏 + 主内容区 + 页脚；新增暗色主题与移动端响应式</li>
+        <li><span class="date">2026/06/25</span> 更新了简介中的使用说明</li>
+        <li><span class="date">2026/06/24</span> 更新了课程资料的 PDF 内容</li>
+        <li><span class="date">2026/06/23</span> 主页创建完成</li>
+      </ul>
+    </div>
+  </main>
+
+</div>
+
+<!-- =============== 页脚 =============== -->
+<footer class="page__footer">
+  <div class="page__footer-inner">
+    <div>
+      © 2026 张竞一 (Jingyi Zhang) · Powered by HTML &amp; CSS
+    </div>
+    <div class="page__footer-follow">
+      <a href="mailto:zhangjingyi@mail.ustc.edu.cn">Email</a>
+      <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" rel="noopener">Layout inspired by academicpages</a>
+    </div>
   </div>
-  <!-- 右侧主内容区 -->
-  <div id="mainpart">
-    <h2 id="about">关于作者</h2>
-    <h3 id="intro">作者简介</h3>
+</footer>
 
-    <p>本科：中国科学技术大学<br>
-       院系：数学科学学院<br>
-       方向：概率统计<br>
-       年级：2023级本科生</p>
-
-    <h3 id="contact">联系作者</h3>
-    <p>邮箱: zhangjingyi@mail.ustc.edu.cn</p>
-
-    <h3 id="shiyong">使用说明</h3>
-
-    <p>本网站主要用于存放作者的课程资料和教学相关内容，所有内容均为作者个人整理，可供个人的课程学习复习，未经允许请勿转载。</p>
-
-    <p>课程总结中的pdf文件均为作者个人整理的笔记和总结，其中通修课（两大门：数学分析，高等代数；四小门：复分析，实分析，近世代数，微分几何）的笔记部分为作者在大三下学期准备本校2026年暑期数学学院保研夏令营时的笔记，题型总结部分为按照夏令营的大概考试范围整理的自2020年来相应课程的考试题目内容，现放在主页中以供后来者参考复习。其余课程笔记为作者学习对应课程时整理的课堂笔记。对应的教材或者参考书籍资料由于版权问题不能放在链接中，如有需要可以联系作者。</p>
-
-    <p>教学相关部分主要为作者在本科阶段担任电磁学（大三上）、力学与热学（大三下）课程助教时的相关内容整理，主要为助教过程中整理作业答案和习题课讲义。</p>
-
-    <h3 id="changelog">更新日志</h3>
-    <p>2026/06/23 主页创建完成</p>
-    <p>2026/06/24 更新了课程资料的pdf内容</p>
-    <p>2026/06/25 更新了简介中的使用说明</p>
-  </div>
+<script src="main.js"></script>
 </body>
 </html>

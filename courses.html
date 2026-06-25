@@ -1,202 +1,329 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>课程资料 - 张竞一</title>
+  <title>课程资料 · 张竞一</title>
+  <meta name="description" content="张竞一本科期间整理的数学、物理、杂项课程笔记与题型总结">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <!-- 顶部导航栏 -->
-  <div id="choice">
-    <table>
-      <tr>
-        <td><a href="index.html">基本介绍</a></td>
-        <td><span>课程资料</span></td>
-        <td><a href="projects.html">教学相关</a></td>
-      </tr>
-    </table>
+
+<!-- =============== 顶部 Masthead =============== -->
+<header class="masthead">
+  <div class="masthead__inner-wrap">
+    <a href="index.html" class="site-name">
+      张竞一<span class="sep">·</span><span class="en">Jingyi Zhang</span>
+    </a>
+    <button class="menu-toggle" aria-label="菜单" onclick="toggleTopNav()">☰</button>
+    <nav class="masthead__menu" id="topNav">
+      <span class="masthead__menu-item"><a href="index.html">基本介绍</a></span>
+      <span class="masthead__menu-item active"><a href="courses.html">课程资料</a></span>
+      <span class="masthead__menu-item"><a href="projects.html">教学相关</a></span>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题" title="切换浅色/暗色">🌙</button>
+    </nav>
   </div>
-  <!-- 左侧导航栏 -->
-  <div id="menu">
-    <dl>
-      <dt>数学课程</dt>
-      <dd><a href="#analysis">数学分析</a></dd>
-      <dd><a href="#algebra">高等代数</a></dd>
-      <dd><a href="#probability">概率论</a></dd>
-      <dd><a href="#complex">复分析</a></dd>
-      <dd><a href="#realanalysis">实分析</a></dd>
-      <dd><a href="#algebra_modern">近世代数</a></dd>
-      <dd><a href="#functional">泛函分析</a></dd>
-      <dd><a href="#geometry">微分几何</a></dd>
-      <dd><a href="#randomprocess">应用随机过程</a></dd>
-      <dd><a href="#shulitongji">数理统计</a></dd>
-      <dd><a href="#regression">回归分析</a></dd>
-      <dd><a href="#exmath">数学实验</a></dd>
-      <dt>物理部分</dt>
-      <dd><a href="#mechanics">力学与热学</a></dd>
-      <dd><a href="#electromagnetism">电磁学</a></dd>
-      <dd><a href="#optics">光学与原子物理</a></dd>
-      <dt>杂项部分</dt>
-      <dd><a href="#ideology">思政</a></dd>
-      <dd><a href="#history">史纲</a></dd>
-      <dd><a href="#marxism">马原</a></dd>
-      <dd><a href="#maoism">毛概</a></dd>
-      <dd><a href="#astrophysics">天体物理概观</a></dd>
-      <dd><a href="#infosec">信息安全的艺术</a></dd>
-    </dl>
-  </div>
-  <!-- 右侧主内容区 -->
-  <div id="mainpart">
+</header>
 
-<h2 id="math">数学课程</h2>
-<ul>
-    <li id="analysis">
-        数学分析
-        <p>教材：《数学分析教程》上下册 第3版 常庚哲、史济怀 中国科学技术大学出版社</p>
-        <a href="notes/数分复习（教材）.pdf" target="_blank" class="static">[数分复习笔记]</a>
-        <a href="notes/数分题型方法总结.pdf" target="_blank" class="static">[数分题型方法总结]</a>
-    </li>
+<!-- =============== 页面主体 =============== -->
+<div class="page">
 
-    <li id="algebra">
-        高等代数
-        <p>教材：《线性代数》 第1版 李尚志 高等教育出版社</p>
-        <p>参考书籍：《高等代数》 第2版 丘维声 高等教育出版社</p>
-        <a href="notes/线代复习（教材）.pdf" target="_blank" class="static">[高代复习笔记]</a>
-        <a href="notes/线代复习（丘）.pdf" target="_blank" class="static">[丘维声高代整理笔记]</a>
-        <a href="notes/线代题型方法总结.pdf" target="_blank" class="static">[高代题型方法总结]</a>
-        <a href="notes/线性代数小论文.pdf" target="_blank" class="static">[A1线性代数小论文]</a>
-        <a href="notes/A2线性代数小论文.pdf" target="_blank" class="static">[A2线性代数小论文]</a>
-    </li>
+  <!-- 左侧作者栏 -->
+  <aside class="sidebar">
+    <div class="author__avatar">张</div>
+    <div class="author__name">
+      张竞一
+      <span class="en">Jingyi Zhang</span>
+    </div>
+    <div class="author__bio">
+      <strong>中国科学技术大学</strong><br>
+      数学科学学院 · 2023级本科生<br>
+      方向：概率统计
+    </div>
 
-    <li id="probability">
-        概率论
-        <p>教材：简明概率论 刘党政  (讲义)</p>
-        <a href="notes/概率论笔记与例题.pdf" target="_blank" class="static">[概率论笔记]</a>
-    </li>
+    <div class="author__urls-wrapper">
+      <ul class="author__urls">
+        <li><span class="icon">✉</span><a href="mailto:zhangjingyi@mail.ustc.edu.cn">Email</a></li>
+        <li><span class="icon">💬</span>QQ: 2708671241</li>
+        <li><span class="icon">🎓</span><a href="https://www.ustc.edu.cn" target="_blank" rel="noopener">USTC</a></li>
+        <li><span class="icon">📍</span>安徽 · 合肥</li>
+      </ul>
+    </div>
 
-    <li id="complex">
-        复分析
-        <p>教材：《复变函数》 第1版 史济怀，刘太顺 中国科学技术大学出版社</p>
-        <a href="notes/复分析笔记与例题.pdf" target="_blank" class="static">[复分析笔记]</a>
-        <a href="notes/复分析题型方法总结.pdf" target="_blank" class="static">[复分析题型方法总结]</a>
-    </li>
+    <div class="sidebar__nav">
+      <div class="sidebar__nav-group">
+        <div class="sidebar__nav-title">数学课程</div>
+        <ul>
+          <li><a href="#analysis">数学分析</a></li>
+          <li><a href="#algebra">高等代数</a></li>
+          <li><a href="#probability">概率论</a></li>
+          <li><a href="#complex">复分析</a></li>
+          <li><a href="#realanalysis">实分析</a></li>
+          <li><a href="#algebra_modern">近世代数</a></li>
+          <li><a href="#functional">泛函分析</a></li>
+          <li><a href="#geometry">微分几何</a></li>
+          <li><a href="#randomprocess">应用随机过程</a></li>
+          <li><a href="#shulitongji">数理统计</a></li>
+          <li><a href="#regression">回归分析</a></li>
+          <li><a href="#exmath">数学实验</a></li>
+        </ul>
+      </div>
+      <div class="sidebar__nav-group">
+        <div class="sidebar__nav-title">物理部分</div>
+        <ul>
+          <li><a href="#mechanics">力学与热学</a></li>
+          <li><a href="#electromagnetism">电磁学</a></li>
+          <li><a href="#optics">光学与原子物理</a></li>
+        </ul>
+      </div>
+      <div class="sidebar__nav-group">
+        <div class="sidebar__nav-title">杂项部分</div>
+        <ul>
+          <li><a href="#ideology">思政</a></li>
+          <li><a href="#history">史纲</a></li>
+          <li><a href="#marxism">马原</a></li>
+          <li><a href="#maoism">毛概</a></li>
+          <li><a href="#astrophysics">天体物理概观</a></li>
+          <li><a href="#infosec">信息安全的艺术</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
-    <li id="realanalysis">
-        实分析
-        <p>教材：《实变函数论》 第3版 周民强 北京大学出版社</p>
-        <p>参考书籍：《实分析》 第1版 E. M. Stein 机械工业出版社</p>
-        <a href="notes/实分析复习（教材）.pdf" target="_blank" class="static">[实分析复习笔记]</a>
-        <a href="notes/实分析题型方法总结.pdf" target="_blank" class="static">[实分析题型方法总结]</a>
-    </li>
+  <!-- 右侧主内容 -->
+  <main class="main">
+    <div class="page__inner-wrap">
+      <h1 class="page__title">课程资料</h1>
+      <div class="page__meta">共收录 21 门课程 · 最后更新 2026/06/24</div>
 
-    <li id="algebra_modern">
-        近世代数
-        <p>教材：《近世代数引论》 第6版 冯克勤，李尚志，章璞 中国科学技术大学出版社</p>
-        <a href="notes/近世代数复习（教材）.pdf" target="_blank" class="static">[近世代数复习笔记]</a>
-        <a href="notes/近世代数题型方法总结.pdf" target="_blank" class="static">[近世代数题型方法总结]</a>
-    </li>
+      <!-- ============== 数学课程 ============== -->
+      <h2 id="math" class="section-anchor">数学课程</h2>
 
-    <li id="functional">
-        泛函分析
-        <p>教材：《泛函分析讲义》 第2版 张恭庆，林源渠 北京大学出版社</p>
-        <a href="notes/泛函分析笔记.pdf" target="_blank" class="static">[泛函分析笔记]</a>
-    </li>
+      <ul class="course-list">
+        <li id="analysis">
+          <h3>数学分析</h3>
+          <p class="meta">教材：《数学分析教程》上下册 第3版 · 常庚哲、史济怀 · 中国科学技术大学出版社</p>
+          <div class="resources">
+            <a href="notes/数分复习（教材）.pdf" target="_blank" class="resource-link">数分复习笔记</a>
+            <a href="notes/数分题型方法总结.pdf" target="_blank" class="resource-link">数分题型方法总结</a>
+          </div>
+        </li>
 
-    <li id="geometry">
-        微分几何
-        <p>教材：《微分几何》 第2版 彭家贵 陈卿 高等教育出版社</p>
-        <a href="notes/微分几何笔记.pdf" target="_blank" class="static">[微分几何笔记]</a>
-        <a href="notes/微分几何题型方法总结.pdf" target="_blank" class="static">[微分几何题型方法总结]</a>
-    </li>
+        <li id="algebra">
+          <h3>高等代数</h3>
+          <p class="meta">
+            教材：《线性代数》第1版 · 李尚志 · 高等教育出版社<br>
+            参考书：《高等代数》第2版 · 丘维声 · 高等教育出版社
+          </p>
+          <div class="resources">
+            <a href="notes/线代复习（教材）.pdf" target="_blank" class="resource-link">高代复习笔记</a>
+            <a href="notes/线代复习（丘）.pdf" target="_blank" class="resource-link">丘维声高代整理笔记</a>
+            <a href="notes/线代题型方法总结.pdf" target="_blank" class="resource-link">高代题型方法总结</a>
+            <a href="notes/线性代数小论文.pdf" target="_blank" class="resource-link">A1 线性代数小论文</a>
+            <a href="notes/A2线性代数小论文.pdf" target="_blank" class="resource-link">A2 线性代数小论文</a>
+          </div>
+        </li>
 
-    <li id="randomprocess">
-        应用随机过程
-        <p>教材：《Probability and random processes》 第4版 Grimmett, Geoffrey R.; Stirzaker, David R. Oxford University Press, Oxford</p>
-        <a href="notes/期中复习笔记.pdf" target="_blank" class="static">[应随期中复习笔记]</a>
-        <a href="notes/期末复习笔记.pdf" target="_blank" class="static">[应随期末复习笔记]</a>
-    </li>
+        <li id="probability">
+          <h3>概率论</h3>
+          <p class="meta">教材：简明概率论 · 刘党政（讲义）</p>
+          <div class="resources">
+            <a href="notes/概率论笔记与例题.pdf" target="_blank" class="resource-link">概率论笔记</a>
+          </div>
+        </li>
 
-    <li id="shulitongji">
-        数理统计
-        <p>教材：《数理统计》 第3版 韦来生 张伟平 科学出版社</p>
-        <a href="notes/数理统计笔记.pdf" target="_blank" class="static">[数理统计笔记]</a>
-    </li>
+        <li id="complex">
+          <h3>复分析</h3>
+          <p class="meta">教材：《复变函数》第1版 · 史济怀、刘太顺 · 中国科学技术大学出版社</p>
+          <div class="resources">
+            <a href="notes/复分析笔记与例题.pdf" target="_blank" class="resource-link">复分析笔记</a>
+            <a href="notes/复分析题型方法总结.pdf" target="_blank" class="resource-link">复分析题型方法总结</a>
+          </div>
+        </li>
 
-    <li id="regression">
-        回归分析
-        <p>教材：《线性统计模型:线性回归与方差分析》 第1版 王松桂，陈敏，陈立萍 高等教育出版社</p>
-        <a href="notes/回归分析笔记.pdf" target="_blank" class="static">[回归分析笔记]</a>
-    </li>
+        <li id="realanalysis">
+          <h3>实分析</h3>
+          <p class="meta">
+            教材：《实变函数论》第3版 · 周民强 · 北京大学出版社<br>
+            参考书：《实分析》第1版 · E. M. Stein · 机械工业出版社
+          </p>
+          <div class="resources">
+            <a href="notes/实分析复习（教材）.pdf" target="_blank" class="resource-link">实分析复习笔记</a>
+            <a href="notes/实分析题型方法总结.pdf" target="_blank" class="resource-link">实分析题型方法总结</a>
+          </div>
+        </li>
 
-    <li id="exmath">
-        数学实验
-        <a href="notes/实验一.pdf" target="_blank" class="static">[第一次实验]</a>
-        <a href="notes/实验二.pdf" target="_blank" class="static">[第二次实验]</a>
-        <a href="notes/实验三.pdf" target="_blank" class="static">[第三次实验]</a>
-        <a href="notes/实验四.pdf" target="_blank" class="static">[第四次实验]</a>
-        <a href="notes/实验五.pdf" target="_blank" class="static">[第五次实验]</a>
-    </li>
+        <li id="algebra_modern">
+          <h3>近世代数</h3>
+          <p class="meta">教材：《近世代数引论》第6版 · 冯克勤、李尚志、章璞 · 中国科学技术大学出版社</p>
+          <div class="resources">
+            <a href="notes/近世代数复习（教材）.pdf" target="_blank" class="resource-link">近世代数复习笔记</a>
+            <a href="notes/近世代数题型方法总结.pdf" target="_blank" class="resource-link">近世代数题型方法总结</a>
+          </div>
+        </li>
 
-</ul>
+        <li id="functional">
+          <h3>泛函分析</h3>
+          <p class="meta">教材：《泛函分析讲义》第2版 · 张恭庆、林源渠 · 北京大学出版社</p>
+          <div class="resources">
+            <a href="notes/泛函分析笔记.pdf" target="_blank" class="resource-link">泛函分析笔记</a>
+          </div>
+        </li>
 
-<h2 id="physics">物理部分</h2>
-<ul>
-    <li id="mechanics">
-        力学与热学
-        <a href="notes/热学小总结.pdf" target="_blank" class="static">[热学总结]</a>
-    </li>
+        <li id="geometry">
+          <h3>微分几何</h3>
+          <p class="meta">教材：《微分几何》第2版 · 彭家贵、陈卿 · 高等教育出版社</p>
+          <div class="resources">
+            <a href="notes/微分几何笔记.pdf" target="_blank" class="resource-link">微分几何笔记</a>
+            <a href="notes/微分几何题型方法总结.pdf" target="_blank" class="resource-link">微分几何题型方法总结</a>
+          </div>
+        </li>
 
-    <li id="electromagnetism">
-        电磁学
-        <a href="notes/期中复习课讲义.pdf" target="_blank" class="static">[期中复习讲义]</a>
-        <a href="notes/例题.pdf" target="_blank" class="static">[例题]</a>
-        <a href="notes/例题(2).pdf" target="_blank" class="static">[例题(2)]</a>
-    </li>
+        <li id="randomprocess">
+          <h3>应用随机过程</h3>
+          <p class="meta">教材：《Probability and Random Processes》第4版 · Grimmett &amp; Stirzaker · Oxford University Press</p>
+          <div class="resources">
+            <a href="notes/期中复习笔记.pdf" target="_blank" class="resource-link">应随期中复习笔记</a>
+            <a href="notes/期末复习笔记.pdf" target="_blank" class="resource-link">应随期末复习笔记</a>
+          </div>
+        </li>
 
-    <li id="optics">
-        光学与原子物理
-        <a href="notes/光学笔记.pdf" target="_blank" class="static">[光学笔记]</a>
-        <a href="notes/原子物理笔记.pdf" target="_blank" class="static">[原子物理笔记]</a>
-    </li>
-</ul>
+        <li id="shulitongji">
+          <h3>数理统计</h3>
+          <p class="meta">教材：《数理统计》第3版 · 韦来生、张伟平 · 科学出版社</p>
+          <div class="resources">
+            <a href="notes/数理统计笔记.pdf" target="_blank" class="resource-link">数理统计笔记</a>
+          </div>
+        </li>
 
-<h2 id="misc">杂项部分</h2>
-<ul>
-    <li id="ideology">
-        思政
-        <a href="notes/思政题库（含答案）.pdf" target="_blank" class="static">[思政选择题题库]</a>
-    </li>
+        <li id="regression">
+          <h3>回归分析</h3>
+          <p class="meta">教材：《线性统计模型: 线性回归与方差分析》第1版 · 王松桂、陈敏、陈立萍 · 高等教育出版社</p>
+          <div class="resources">
+            <a href="notes/回归分析笔记.pdf" target="_blank" class="resource-link">回归分析笔记</a>
+          </div>
+        </li>
 
-    <li id="history">
-        史纲
-        <a href="notes/中国近现代史纲要.pdf" target="_blank" class="static">[史纲材料]</a>
-        <a href="notes/近现代史题库.pdf" target="_blank" class="static">[史纲选择题题库]</a>
-    </li>
+        <li id="exmath">
+          <h3>数学实验</h3>
+          <div class="resources">
+            <a href="notes/实验一.pdf" target="_blank" class="resource-link">第一次实验</a>
+            <a href="notes/实验二.pdf" target="_blank" class="resource-link">第二次实验</a>
+            <a href="notes/实验三.pdf" target="_blank" class="resource-link">第三次实验</a>
+            <a href="notes/实验四.pdf" target="_blank" class="resource-link">第四次实验</a>
+            <a href="notes/实验五.pdf" target="_blank" class="resource-link">第五次实验</a>
+          </div>
+        </li>
+      </ul>
 
-    <li id="marxism">
-        马原
-        <a href="notes/马原.pdf" target="_blank" class="static">[马原材料]</a>
-    </li>
+      <!-- ============== 物理课程 ============== -->
+      <h2 id="physics" class="section-anchor">物理部分</h2>
 
-    <li id="maoism">
-        毛概
-        <a href="notes/毛概.pdf" target="_blank" class="static">[毛概材料]</a>
-    </li>
+      <ul class="course-list">
+        <li id="mechanics">
+          <h3>力学与热学</h3>
+          <div class="resources">
+            <a href="notes/热学小总结.pdf" target="_blank" class="resource-link">热学总结</a>
+          </div>
+        </li>
 
-    <li id="astrophysics">
-        天体物理概观
-        <a href="notes/天体物理概观整理.pdf" target="_blank" class="static">[天体物理概观整理]</a>
-    </li>
+        <li id="electromagnetism">
+          <h3>电磁学</h3>
+          <div class="resources">
+            <a href="notes/期中复习课讲义.pdf" target="_blank" class="resource-link">期中复习讲义</a>
+            <a href="notes/例题.pdf" target="_blank" class="resource-link">例题</a>
+            <a href="notes/例题(2).pdf" target="_blank" class="resource-link">例题(2)</a>
+          </div>
+        </li>
 
-    <li id="infosec">
-        信息安全的艺术
-        <a href="notes/实验1.pdf" target="_blank" class="static">[实验1]</a>
-        <a href="notes/实验2.pdf" target="_blank" class="static">[实验2]</a>
-        <a href="notes/实验3.pdf" target="_blank" class="static">[实验3]</a>
-        <a href="notes/实验4.pdf" target="_blank" class="static">[实验4]</a>
-</ul>
+        <li id="optics">
+          <h3>光学与原子物理</h3>
+          <div class="resources">
+            <a href="notes/光学笔记.pdf" target="_blank" class="resource-link">光学笔记</a>
+            <a href="notes/原子物理笔记.pdf" target="_blank" class="resource-link">原子物理笔记</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- ============== 杂项课程 ============== -->
+      <h2 id="misc" class="section-anchor">杂项部分</h2>
+
+      <ul class="course-list">
+        <li id="ideology">
+          <h3>思政</h3>
+          <div class="resources">
+            <a href="notes/思政题库（含答案）.pdf" target="_blank" class="resource-link">思政选择题题库</a>
+          </div>
+        </li>
+
+        <li id="history">
+          <h3>史纲</h3>
+          <div class="resources">
+            <a href="notes/中国近现代史纲要.pdf" target="_blank" class="resource-link">史纲材料</a>
+            <a href="notes/近现代史题库.pdf" target="_blank" class="resource-link">史纲选择题题库</a>
+          </div>
+        </li>
+
+        <li id="marxism">
+          <h3>马原</h3>
+          <div class="resources">
+            <a href="notes/马原.pdf" target="_blank" class="resource-link">马原材料</a>
+          </div>
+        </li>
+
+        <li id="maoism">
+          <h3>毛概</h3>
+          <div class="resources">
+            <a href="notes/毛概.pdf" target="_blank" class="resource-link">毛概材料</a>
+          </div>
+        </li>
+
+        <li id="astrophysics">
+          <h3>天体物理概观</h3>
+          <div class="resources">
+            <a href="notes/天体物理概观整理.pdf" target="_blank" class="resource-link">天体物理概观整理</a>
+          </div>
+        </li>
+
+        <li id="infosec">
+          <h3>信息安全的艺术</h3>
+          <div class="resources">
+            <a href="notes/实验1.pdf" target="_blank" class="resource-link">实验 1</a>
+            <a href="notes/实验2.pdf" target="_blank" class="resource-link">实验 2</a>
+            <a href="notes/实验3.pdf" target="_blank" class="resource-link">实验 3</a>
+            <a href="notes/实验4.pdf" target="_blank" class="resource-link">实验 4</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </main>
 
 </div>
+
+<!-- =============== 页脚 =============== -->
+<footer class="page__footer">
+  <div class="page__footer-inner">
+    <div>
+      © 2026 张竞一 (Jingyi Zhang) · Powered by HTML &amp; CSS
+    </div>
+    <div class="page__footer-follow">
+      <a href="mailto:zhangjingyi@mail.ustc.edu.cn">Email</a>
+      <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" rel="noopener">Layout inspired by academicpages</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
